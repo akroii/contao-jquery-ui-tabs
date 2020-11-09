@@ -39,6 +39,6 @@ abstract class ContentTab extends \ContentElement
 		
 		$this->Template->headline	= is_array($arrHeadline) ? $arrHeadline['value'] : $arrHeadline;
 		$this->Template->hl			= is_array($arrHeadline) ? $arrHeadline['unit'] : 'h1';
-		$this->Template->alias 		= $this->juiTabAlias;
+		$this->Template->alias 		= \StringUtil::standardize($this->juiTabAlias, true);
 	}
 }
